@@ -264,7 +264,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
           <p className="text-xl mb-10 opacity-95 leading-relaxed">
-            Don't miss out on the latest news and updates from The Stables community.
+            Don&apos;t miss out on the latest news and updates from The Stables community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

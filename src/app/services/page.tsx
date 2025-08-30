@@ -190,7 +190,7 @@ export default function ServicesPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Initial Assessment</h3>
-                    <p className="text-gray-600">We'll meet with you to understand your situation and determine the best way to help.</p>
+                    <p className="text-gray-600">We&apos;ll meet with you to understand your situation and determine the best way to help.</p>
                   </div>
                 </div>
                 
@@ -210,7 +210,7 @@ export default function ServicesPage() {
               <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-3xl p-8 text-white shadow-large">
                 <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>
                 <p className="text-lg mb-8 leading-relaxed">
-                  Don't hesitate to reach out. Our team is here to help you navigate challenges and find solutions.
+                  Don&apos;t hesitate to reach out. Our team is here to help you navigate challenges and find solutions.
                 </p>
                 
                 <div className="space-y-4">
@@ -245,9 +245,9 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Need Help? We're Here For You</h2>
+          <h2 className="text-4xl font-bold mb-6">Need Help? We&apos;re Here For You</h2>
           <p className="text-xl mb-10 opacity-95 leading-relaxed">
-            Every person's situation is unique. Let us work with you to find the right solution and provide the support you need.
+            Every person&apos;s situation is unique. Let us work with you to find the right solution and provide the support you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
