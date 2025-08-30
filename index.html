@@ -3,166 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Community Church - Welcome Home</title>
+    <title>The Stables Christian Centre - Help, Hope, Healing</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stables-green': '#2d5a27',
+                        'stables-gold': '#d4af37',
+                        'stables-brown': '#8b4513'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-sans">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-blue-600">Grace Community Church</h1>
+                    <div class="text-2xl font-bold text-stables-green">
+                        <i class="fas fa-church mr-2"></i>
+                        The Stables
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-blue-600 font-medium">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About</a>
-                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition">Services</a>
-                    <a href="events.html" class="text-gray-700 hover:text-blue-600 transition">Events</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-stables-green transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-stables-green transition-colors">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-stables-green transition-colors">Services</a>
+                    <a href="#community" class="text-gray-700 hover:text-stables-green transition-colors">Community</a>
+                    <a href="#contact" class="text-gray-700 hover:text-stables-green transition-colors">Contact</a>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-700 hover:text-blue-600">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-stables-green">
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-700 hover:text-stables-green transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-stables-green transition-colors">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-stables-green transition-colors">Services</a>
+                    <a href="#community" class="text-gray-700 hover:text-stables-green transition-colors">Community</a>
+                    <a href="#contact" class="text-gray-700 hover:text-stables-green transition-colors">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section id="home" class="relative bg-gradient-to-br from-stables-green to-stables-brown text-white">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Grace Community Church</h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">A place where faith, community, and love come together. Join us every Sunday for worship, fellowship, and spiritual growth.</p>
-                <div class="space-x-4">
-                    <a href="services.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Join Us This Sunday</a>
-                    <a href="about.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">Learn More</a>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Help • Hope • Healing
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    A vibrant, hands-on community committed to living out the love of Christ in practical and powerful ways.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="bg-stables-gold text-stables-green px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">
+                        Our Services
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-stables-green transition-colors">
+                        Visit Us
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Times -->
-    <section class="py-16 bg-white">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Service Times</h2>
-                <p class="text-xl text-gray-600">Join us for worship and fellowship</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About The Stables</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Founded in 1993 by Sonny and Lynne Hoet, we began with a vision inspired by Luke 4:18 to preach good news to the poor, heal the broken hearted, and bring freedom and restoration to those in need.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-blue-50 p-8 rounded-lg text-center">
-                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Sunday Morning</h3>
-                    <p class="text-4xl font-bold text-gray-900 mb-2">9:00 AM</p>
-                    <p class="text-gray-600">Traditional Service</p>
-                </div>
-                <div class="bg-purple-50 p-8 rounded-lg text-center">
-                    <h3 class="text-2xl font-semibold text-purple-600 mb-2">Sunday Morning</h3>
-                    <p class="text-4xl font-bold text-gray-900 mb-2">11:00 AM</p>
-                    <p class="text-gray-600">Contemporary Service</p>
-                </div>
-                <div class="bg-green-50 p-8 rounded-lg text-center">
-                    <h3 class="text-2xl font-semibold text-green-600 mb-2">Wednesday Evening</h3>
-                    <p class="text-4xl font-bold text-gray-900 mb-2">7:00 PM</p>
-                    <p class="text-gray-600">Bible Study</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Welcome Message -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Welcome to Our Church Family</h2>
-                    <p class="text-lg text-gray-600 mb-6">At Grace Community Church, we believe in creating a welcoming environment where everyone can experience God's love and grow in their faith journey. Our diverse congregation represents people from all walks of life, united in our commitment to serving God and our community.</p>
-                    <p class="text-lg text-gray-600 mb-8">Whether you're new to faith or have been walking with God for years, you'll find a place to belong here. We invite you to join us this Sunday and experience the warmth of our church family.</p>
-                    <a href="about.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Learn More About Us</a>
+                    <h3 class="text-2xl font-bold text-stables-green mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">
+                        Located on 33 acres at the edge of suburbia in the City of Onkaparinga, we've created a welcoming space where individuals and families can find help, hope, and healing.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Whether you're looking for spiritual growth, emotional support, or practical help, The Stables is a place where you'll be seen, supported, and encouraged.
+                    </p>
+                    <div class="flex items-center text-stables-green">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>33 acres of welcoming space</span>
+                    </div>
                 </div>
-                <div class="bg-blue-600 p-8 rounded-lg text-white">
-                    <h3 class="text-2xl font-bold mb-4">What to Expect</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Casual, welcoming atmosphere
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Inspiring worship music
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Relevant, biblical teaching
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Children's ministry available
-                        </li>
-                    </ul>
+                <div class="bg-gray-100 rounded-lg p-8">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-stables-green mb-2">30+</div>
+                            <div class="text-gray-600">Years of Service</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-stables-green mb-2">33</div>
+                            <div class="text-gray-600">Acres of Land</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-stables-green mb-2">100+</div>
+                            <div class="text-gray-600">Volunteers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-stables-green mb-2">2</div>
+                            <div class="text-gray-600">Overseas Partners</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Upcoming Events -->
-    <section class="py-16 bg-white">
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-                <p class="text-xl text-gray-600">Join us for these special gatherings</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    From food parcels and financial counselling to supported housing and community training, we walk alongside people at their point of need.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                    <div class="bg-blue-600 p-4 text-white text-center">
-                        <p class="text-sm font-semibold">DECEMBER 24</p>
-                        <p class="text-2xl font-bold">Christmas Eve Service</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Op Shop -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-shopping-bag"></i>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">Join us for a special candlelight service celebrating the birth of Jesus Christ.</p>
-                        <p class="text-sm text-gray-500">7:00 PM - Main Sanctuary</p>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                    <div class="bg-purple-600 p-4 text-white text-center">
-                        <p class="text-sm font-semibold">EVERY SUNDAY</p>
-                        <p class="text-2xl font-bold">Youth Group</p>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">A fun and engaging environment for teenagers to grow in their faith.</p>
-                        <p class="text-sm text-gray-500">5:00 PM - Youth Center</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Op Shop</h3>
+                    <p class="text-gray-600 mb-4">
+                        Affordable clothing, household items, and furniture, with proceeds supporting both local and overseas outreach.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-clock mr-1"></i>
+                        Open Monday - Friday
                     </div>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                    <div class="bg-green-600 p-4 text-white text-center">
-                        <p class="text-sm font-semibold">MONTHLY</p>
-                        <p class="text-2xl font-bold">Community Outreach</p>
+
+                <!-- Financial Counselling -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">Serving our local community through various outreach programs.</p>
-                        <p class="text-sm text-gray-500">Various Times & Locations</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Financial Counselling</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional financial advice and support to help families manage their finances and overcome financial challenges.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-calendar mr-1"></i>
+                        By appointment
+                    </div>
+                </div>
+
+                <!-- Stable Help -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Stable Help</h3>
+                    <p class="text-gray-600 mb-4">
+                        Essential support and long-term accommodation through our partnership with Cornerstone Housing.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-phone mr-1"></i>
+                        Contact for details
+                    </div>
+                </div>
+
+                <!-- Worship Services -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Worship Services</h3>
+                    <p class="text-gray-600 mb-4">
+                        Regular worship services, prayer meetings, Bible studies, and spiritual growth opportunities.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-clock mr-1"></i>
+                        Sunday Services
+                    </div>
+                </div>
+
+                <!-- Food Hamper -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Food Hamper</h3>
+                    <p class="text-gray-600 mb-4">
+                        Emergency food assistance for families in need, providing essential nutrition and support.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Emergency assistance
+                    </div>
+                </div>
+
+                <!-- Stables Hub -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-stables-gold text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Stables Hub</h3>
+                    <p class="text-gray-600 mb-4">
+                        Community training programs, social groups for seniors, youth, and everyone in between.
+                    </p>
+                    <div class="text-sm text-stables-green font-semibold">
+                        <i class="fas fa-calendar mr-1"></i>
+                        Various programs
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-8">
-                <a href="events.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">View All Events</a>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Community & Facilities</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We offer places of peace, purpose, and connection through our various community spaces and programs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-stables-green text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-church text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Chapel</h3>
+                    <p class="text-gray-600">A peaceful space for worship and prayer</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-stables-green text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Women's Shed</h3>
+                    <p class="text-gray-600">Creative and practical workshops for women</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-stables-green text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Community Garden</h3>
+                    <p class="text-gray-600">Growing fresh produce and community bonds</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-stables-green text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rose text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Rose Garden</h3>
+                    <p class="text-gray-600">A beautiful space to walk and pray</p>
+                </div>
+            </div>
+
+            <!-- Overseas Outreach -->
+            <div class="mt-16 bg-gradient-to-r from-stables-green to-stables-brown rounded-lg p-8 text-white">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Overseas Outreach</h3>
+                    <p class="text-lg mb-6">
+                        Beyond our borders, we support communities in Vanuatu and Papua New Guinea, helping to build brighter futures.
+                    </p>
+                    <div class="flex justify-center space-x-8">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold mb-2">Vanuatu</div>
+                            <div class="text-sm opacity-90">Community Development</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold mb-2">Papua New Guinea</div>
+                            <div class="text-sm opacity-90">Education & Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Visit Us</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Come and be part of a community where love is shown in action, and lives are being transformed one person, one family, and one community at a time.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-stables-green mt-1 mr-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Address</div>
+                                    <div class="text-gray-600">684 Brodie Road<br>Huntfield Heights SA 5163</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-stables-green mt-1 mr-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Phone</div>
+                                    <div class="text-gray-600">(08) 8326 4455</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-stables-green mt-1 mr-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Email</div>
+                                    <div class="text-gray-600">contactus@stables.org.au</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-stables-green mt-1 mr-3">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Office Hours</div>
+                                    <div class="text-gray-600">Monday - Friday<br>9:00 AM - 5:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-stables-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-stables-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-stables-green focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-stables-green text-white py-3 px-6 rounded-md font-semibold hover:bg-green-700 transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -170,60 +391,88 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Grace Community Church</h3>
-                    <p class="text-gray-300 mb-4">A place where faith, community, and love come together.</p>
+                    <div class="text-2xl font-bold text-stables-gold mb-4">
+                        <i class="fas fa-church mr-2"></i>
+                        The Stables
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        A vibrant, hands-on community committed to living out the love of Christ in practical and powerful ways.
+                    </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-blue-400">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
+                        <a href="#" class="text-gray-400 hover:text-stables-gold transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                            </svg>
+                        <a href="#" class="text-gray-400 hover:text-stables-gold transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
-                            </svg>
+                        <a href="#" class="text-gray-400 hover:text-stables-gold transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
                 </div>
+
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400">About Us</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400">Service Times</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-blue-400">Events</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400">Contact</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-stables-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-stables-gold transition-colors">About</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-stables-gold transition-colors">Services</a></li>
+                        <li><a href="#community" class="text-gray-300 hover:text-stables-gold transition-colors">Community</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-stables-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>
+
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Ministries</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400">Youth Ministry</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400">Children's Ministry</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400">Music Ministry</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400">Outreach</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
                     <div class="space-y-2 text-gray-300">
-                        <p>123 Church Street</p>
-                        <p>City, State 12345</p>
-                        <p>Phone: (555) 123-4567</p>
-                        <p>Email: info@gracechurch.com</p>
+                        <div>684 Brodie Road</div>
+                        <div>Huntfield Heights SA 5163</div>
+                        <div>Phone: (08) 8326 4455</div>
+                        <div>Email: contactus@stables.org.au</div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2024 Grace Community Church. All rights reserved.</p>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 The Stables Christian Centre. All rights reserved.</p>
+                <p class="text-sm mt-2">Website Development by Micro Box | Designed By Lynne Hoet</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
