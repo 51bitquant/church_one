@@ -25,7 +25,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -34,10 +34,10 @@ export default function Navigation() {
               <span className="text-white font-bold text-lg">S</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-primary-900 group-hover:text-primary-700 transition-colors">
+              <h1 className="text-2xl font-black text-gray-900 group-hover:text-primary-700 transition-colors">
                 The Stables
               </h1>
-              <p className="text-sm text-gray-600 -mt-1">Christian Centre</p>
+              <p className="text-sm font-semibold text-gray-700 -mt-1">Christian Centre</p>
             </div>
           </Link>
 
@@ -47,10 +47,10 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-2 rounded-lg text-sm font-black transition-all duration-200 ${
                   isActive(item.href)
-                    ? 'bg-primary-100 text-primary-700 shadow-soft'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'bg-primary-100 text-primary-900 shadow-soft'
+                    : 'text-gray-900 hover:text-primary-800 hover:bg-gray-100'
                 }`}
               >
                 {item.name}
@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="bg-primary-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-primary-700 shadow-soft hover:shadow-medium transition-all duration-200"
+              className="bg-primary-600 text-white px-6 py-3 rounded-lg font-black text-sm hover:bg-primary-700 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 transform border-2 border-primary-600"
             >
               Get Involved
             </Link>
@@ -72,7 +72,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-primary-600 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="text-gray-900 hover:text-primary-800 p-2 rounded-lg hover:bg-gray-100 transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -105,17 +105,17 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white animate-fade-in">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-lg text-sm font-black transition-colors ${
                     isActive(item.href)
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                      ? 'bg-primary-100 text-primary-900'
+                      : 'text-gray-900 hover:text-primary-800 hover:bg-gray-100'
                   }`}
                 >
                   {item.name}
@@ -124,7 +124,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-primary-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors mt-2"
+                className="bg-primary-600 text-white px-4 py-3 rounded-lg font-black text-sm hover:bg-primary-700 transition-colors mt-2 border-2 border-primary-600"
               >
                 Get Involved
               </Link>

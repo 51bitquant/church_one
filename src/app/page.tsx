@@ -16,27 +16,28 @@ export default function Home() {
             priority
           />
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/70 to-primary-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/85"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in drop-shadow-lg">
+            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight animate-fade-in text-white" style={{textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)'}}>
               Help • Hope • Healing
             </h1>
-            <p className="text-xl md:text-2xl mb-10 leading-relaxed opacity-95 animate-slide-up drop-shadow-lg">
+            <p className="text-xl md:text-2xl mb-10 leading-relaxed font-medium animate-slide-up text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5)'}}>
               A vibrant, hands-on community committed to living out the love of Christ in practical and powerful ways.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <Link
                 href="/contact"
-                className="bg-white text-primary-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 hover:shadow-large transition-all duration-300 shadow-soft hover:scale-105 transform"
+                className="bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-primary-700 hover:shadow-xl transition-all duration-300 shadow-lg hover:scale-105 transform"
               >
                 Visit Us
               </Link>
               <Link
                 href="/about"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary-900 transition-all duration-300 hover:scale-105 transform"
+                className="border-2 border-white bg-transparent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-primary-900 transition-all duration-300 hover:scale-105 transform shadow-lg"
+                style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}
               >
                 Learn More
               </Link>
@@ -75,10 +76,10 @@ export default function Home() {
                 </p>
                 <Link
                   href="/about"
-                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-xl font-medium hover:bg-primary-700 transition-colors shadow-soft hover:shadow-medium hover:scale-105 transform"
+                  className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-primary-600 text-white rounded-xl font-bold text-base sm:text-lg hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   Learn More About Us
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
@@ -205,10 +206,10 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center px-8 py-3 bg-primary-600 text-white rounded-xl font-medium hover:bg-primary-700 transition-colors shadow-soft hover:shadow-medium hover:scale-105 transform"
+              className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-primary-600 text-white rounded-xl font-bold text-base sm:text-lg hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
             >
               View All Services
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -231,13 +232,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/about"
-                  className="bg-primary-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-primary-700 transition-colors shadow-soft hover:shadow-medium hover:scale-105 transform"
+                  className="bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   Our Story
                 </Link>
                 <Link
                   href="/community"
-                  className="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-xl font-medium hover:bg-primary-600 hover:text-white transition-colors hover:scale-105 transform"
+                  className="border-2 border-primary-600 bg-transparent text-primary-600 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-primary-600 hover:text-white transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl"
                 >
                   Join Our Community
                 </Link>
@@ -268,20 +269,21 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Involved?</h2>
-          <p className="text-xl mb-10 opacity-95 leading-relaxed">
+          <h2 className="text-4xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Ready to Get Involved?</h2>
+          <p className="text-xl mb-10 leading-relaxed text-white font-medium" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>
             Whether you&apos;re exploring faith, seeking support, or looking to give back through volunteering, The Stables is a place for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-soft hover:scale-105 transform"
+              className="bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-primary-700 transition-all duration-300 shadow-lg hover:scale-105 transform"
             >
               Contact Us
             </Link>
             <Link
               href="/community"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary-600 transition-colors hover:scale-105 transform"
+              className="border-2 border-white bg-transparent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-primary-600 transition-all duration-300 hover:scale-105 transform shadow-lg"
+              style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}
             >
               Join Our Community
             </Link>
